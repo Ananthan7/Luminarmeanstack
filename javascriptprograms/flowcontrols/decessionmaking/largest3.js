@@ -7,7 +7,7 @@ else if((num1<num2) && (num2>num3)){
     console.log("largest is "+num2);
 }
 else if((num1>num2) && (num1>num3)){
-    console.log("largest is "+ num1);
+    console.log("largest is "+ num1);   
 }
 else{
     console.log("numbers are equal");
