@@ -4,7 +4,7 @@ var num3 = 15;
 
 // if num1 is largest
 if (num1 > num2 && num1 > num3){
-  if(num2 > num3){
+  if(num2 > num3){ 
     console.log(`2nd largest is ${num2}`);
   }else{
     console.log(`2nd largest is ${num3}`);
