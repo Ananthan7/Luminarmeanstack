@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to document object model</h1>
+
+    <h2 class="item">document object attributes</h2>
+    <ul>
+        <li id="hoo">document.getElementByTagName</li>
+        <li class="item">document.getElementById</li>
+        <li>document.getElementByClassName()</li>
+        <li id="last">document.querySelector()</li>
+    </ul>
+    <ul>
+        <li id="clks">click me</li>
+        <li id="event">double click me</li>
+        <li id="mh">mouse hover</li>
+    </ul>
+</body>
+<script>
+// colors with tagname
+    var head = document.getElementsByTagName("h1")
+    for(let h of head){
+        h.style.color="green";
+    }
+
+    var li = document.getElementsByTagName("li")
+    for(let lis of li){
+        lis.style.color="blue";
+    }
+
+    // with id
+    var ids = document.getElementById("hoo")
+    ids.style.color="red"
+
+    // with class name
+    var itm = document.getElementsByClassName("item")
+    for(let tm of itm){
+        tm.style.color="yellow";
+    }
+    // querySelector
+    var qry = document.querySelector("#last")
+    qry.style.color="orange"
+
+    // querySelectorAll
+
+    // var list = document.querySelectorAll("li")
+
+    document.querySelector("#last").textContent="Document"
+    document.querySelector("#last").innerHTML="Document.queryselectorall"
+
+    // addevents
+    var clk=document.querySelector("#clks")
+    clk.addEventListener('click',()=>{
+        clk.innerHTML="heloooooo"
+        clk.style.color="green"
+    })
+    // double click
+    var dbl = document.querySelector("#event")
+    dbl.addEventListener("dblclick", ()=>{
+        dbl.innerHTML="heloooooo"
+        dbl.style.color="green"
+    })
+    // mousehover
+    var ove = document.querySelector("#mh")
+    ove.addEventListener("mouseover", ()=>{
+        ove.innerHTML="mouse is here"
+    })
+    ove.addEventListener("mouseout", ()=>{
+        ove.innerHTML="mouseout"
+    })
+
+</script>
+</html>
