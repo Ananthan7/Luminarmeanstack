@@ -983,3 +983,19 @@ var todos = [
     completed: false,
   },
 ];
+
+// list all todos whose completed status true
+for(let i of todos){
+  if(i.completed==true){
+    console.log(i);
+  }else{
+    console.log("invalid");
+  }
+}
+
+// list all todos whose userid is 1
+for(let i of todos){
+  if(i.userId==1){
+    console.log(i);
+  }
+}

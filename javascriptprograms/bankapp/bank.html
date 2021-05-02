@@ -8,7 +8,7 @@
     <!-- CSS only -->
     <style>
         *{
-            background-color: rgb(49, 70, 64);
+            background-color: rgb(0, 0, 0);
             color: whitesmoke;
         }
     </style>
@@ -18,29 +18,22 @@
    <div class="container-fluid">
        <div class="header" style="text-align: center;"><h1 style="font-weight: bolder;">Bank-App</h1></div>
        <div class="row m-5">
-
-        <form>
             <div class="form-group w-50">
               <label for="exampleInputEmail1">Account Number</label>
-              <input type="text" class="form-control" id="acnum" placeholder="Enter Account number">
-            </div>
-            <div class="form-group  w-50">
-                <label for="exampleInputEmail1">Account Type</label>
-                <input type="text" class="form-control" id="actype" placeholder="Enter Account Type">
+              <input type="text" class="form-control" id="acno" placeholder="Enter Account number">
             </div>
             <div class="form-group w-50">
                 <label for="exampleInputEmail1">Username</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter Username">
+                <input type="text" class="form-control" id="uname" placeholder="Enter Username">
             </div>
             <div class="form-group w-50">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Password">
+              <input type="text" class="form-control" id="pwd" placeholder="Password">
             </div>
-            <button type="submit" class="btn btn-primary mt-2" onclick="login()">Submit</button>
-          </form>
+            <button class="btn btn-primary mt-2" onclick="Bank.login()">Login</button>
 
        </div>
    </div>
 </body>
-<script src="bankscript.js"></script>
+<script src="bankclass.js"></script>
 </html>
