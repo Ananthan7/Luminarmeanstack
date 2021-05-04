@@ -41,12 +41,38 @@ class Bank{
         }
 
     }
-    // withdrawal(){
+    static withdrawal(){
+        let accno=acno.value;
+        let username=uname.value;
+        let password=pwd.value;
+        let amount=amnt.value
+        let user=Bank.authenticate(accno,username,password)
+        let users=Bank.getAccountDetails()
+        if (user == 1){
+            let bal = users[accno]["balance"];
+            bal -= amount;
+            let value=`<h3>debited Rs : ${amount} balance is ${bal}</h3>`
+            document.querySelector("#resultarea").innerHTML=value
 
-    // }
-    // deposit(){
+        }
 
-    // }
+    }
+    deposit(){
+        let accno=acno.value;
+        let username=uname.value;
+        let password=pwd.value;
+        let amount=amnt.value
+        let user=Bank.authenticate(accno,username,password)
+        let users=Bank.getAccountDetails()
+        if (user == 1){
+            let bal = users[accno]["balance"];
+            bal += amount;
+            let value=`<h3>Added Rs : ${amount} balance is ${bal}</h3>`
+            document.querySelector("#resultarea").innerHTML=value
+
+        }
+
+    }
     static checkBalance(){
         let accno=acno.value;
         let username=uname.value;
