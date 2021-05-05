@@ -26,8 +26,15 @@ function displayTodo() {
           <h5 class="card-title">${todoo.todos}</h5>
           <p class="card-text">${todoo.status}</p>
           <a href="#" class="card-link">${todoo.user_name}</a>
+          <button onclick="deleted(${todoo.slno})">Delete</button>
         </div>
       </div> `;
   }
   document.querySelector("#result").innerHTML = html_data;
+}
+
+function deleted(id){
+  localStorage.removeItem(id)
+  var myobj = document.getElementById("result");
+  myobj.removeChild(myobj.childNodes[id]);
 }
